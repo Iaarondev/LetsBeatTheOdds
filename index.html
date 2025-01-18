@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Beat The Odds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: #1a365d;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .alert {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+
+        .strategy-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #2b6cb0;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #2c5282;
+        }
+
+        .feed {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .strategy-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+
+        .strategy-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #718096;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        .footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Let's Beat The Odds</h1>
+            <p>An AI-powered platform for exploring unconventional betting strategies and odds analysis.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="alert">
+            <strong>Responsible Gambling Notice:</strong> Gambling can be addictive and risky. Please gamble responsibly and be aware of your local regulations. 
+            If you need help, contact the National Problem Gambling Helpline: 1-800-522-4700
+        </div>
+
+        <section class="section">
+            <h2>About Us</h2>
+            <p>Welcome to Let's Beat The Odds, where we analyze betting strategies through data-driven approaches. Our platform is for educational purposes only and does not guarantee financial success.</p>
+        </section>
+
+        <section class="section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>AI-Powered Models</h3>
+                    <p>Explore data-driven analysis of betting patterns and trends.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Community Strategies</h3>
+                    <p>Share and discover user-submitted strategies and insights.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Backtesting</h3>
+                    <p>Review historical performance data to validate strategies.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Dynamic Feed</h3>
+                    <p>Stay updated with trending community insights and analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Submit Your Strategy</h2>
+            <form class="strategy-form">
+                <div class="form-group">
+                    <label for="strategy-title">Strategy Title:</label>
+                    <input type="text" id="strategy-title" name="strategy-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="strategy-description">Description:</label>
+                    <textarea id="strategy-description" name="strategy-description" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="success-rate">Backtest Success Rate (%):</label>
+                    <input type="number" id="success-rate" name="success-rate" min="0" max="100" required>
+                </div>
+                <button type="submit">Submit Strategy</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Community Strategies</h2>
+            <div class="feed">
+                <div class="strategy-card">
+                    <h3>Momentum Trading Strategy</h3>
+                    <p>A systematic approach to identifying and capitalizing on market trends using technical indicators.</p>
+                    <div class="strategy-meta">
+                        <span>Success Rate: 68%</span>
+                        <span>Posted: Jan 15, 2025</span>
+                    </div>
+                </div>
+                <div class="strategy-card">
+                    <h3>Statistical Arbitrage Model</h3>
+                    <p>Leveraging statistical analysis to identify pricing inefficiencies across different markets.</p>
+                    <div class="strategy-meta">
+                        <span>Success Rate: 72%</span>
+                        <span>Posted: Jan 14, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Let's Beat The Odds. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.querySelector('.strategy-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('strategy-title').value;
+            const description = document.getElementById('strategy-description').value;
+            const successRate = document.getElementById('success-rate').value;
+
+            // Create new strategy card
+            const strategyCard = document.createElement('div');
+            strategyCard.className = 'strategy-card';
+            strategyCard.innerHTML = `
+                <h3>${title}</h3>
+                <p>${description}</p>
+                <div class="strategy-meta">
+                    <span>Success Rate: ${successRate}%</span>
+                    <span>Posted: ${new Date().toLocaleDateString()}</span>
+                </div>
+            `;
+
+            // Add to feed
+            document.querySelector('.feed').prepend(strategyCard);
+
+            // Reset form
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
